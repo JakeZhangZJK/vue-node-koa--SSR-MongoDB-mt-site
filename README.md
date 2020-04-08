@@ -1,22 +1,2 @@
-# loveVueApp
-
-> My divine Nuxt.js project
-
-## Build Setup
-
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## 写在开头
+><div>大家好，这里是<font color=chocolate>lionLoveVue</font>，基础知识决定了编程思维，学如逆水行舟，不进则退。金三银四，为了面试也还在慢慢积累知识，Github上面可以直接查看所有前端知识点梳理，<a href="https://github.com/Chocolate1999/Front-end-learning-to-organize-notes">github传送门</a>，觉得不错，点个Star★，好运连连，Offer终究鼠于你，持续更新中。另外，也可以关注微信公众号：<font color=chocolate>小狮子前端Vue</font>，源码以及资料今后都会放在里面。</div>
