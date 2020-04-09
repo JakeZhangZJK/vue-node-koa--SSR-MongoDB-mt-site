@@ -45,6 +45,27 @@
 </template>
 <script>
 export default {
+  data: () => {
+    return {
+      kind: 'all',
+      list: {
+        all: [],
+        part: [],
+        spa: [],
+        movie: [],
+        travel: []
+      }
+    }
+  },
+  computed: {
+    cur: function () {
+      return this.list[this.kind]
+    }
+  },
+  methods: {
+    over:  function (e) {
+      }
+    }
 }
 </script>
 <style lang="scss">
