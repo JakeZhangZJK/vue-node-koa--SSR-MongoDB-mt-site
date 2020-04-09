@@ -1,27 +1,23 @@
-<!--  -->
 <template>
     <div class="search-panel">
         <el-row class="m-header-searchbar">
             <el-col :span="3" class="left">
-                <img src="//s0.meituan.net/bs/fe-web-meituan/fa5f0f0/img/logo.png" alt="美团">
+                <img src="//s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/logo.png" alt="美团">
             </el-col>
             <el-col :span="15" class="center">
                 <div class="wrapper">
-                    <el-input v-model="search" @focus="focus" @blur="blur" placeholder="搜索商家或地点"/>
+                    <el-input v-model="search"
+                     @focus="focus" 
+                     @blur="blur"
+                     @input="input"
+                     placeholder="搜索商家或地点"/>
                     <button class="el-button el-button--primary"><i class="el-icon-search"/></button>
                     <dl class="hotPlace" v-if="isHotPlace">
                         <dt>热门搜索</dt>
-                        <dd>火锅</dd>
-                        <dd>火锅</dd>
-                        <dd>火锅</dd>
-                        <dd>火锅</dd>
-                        <dd>火锅</dd>
+                        <dd v-for="(item,idx) in hotPlace" :key="idx">{{ item }}</dd>
                     </dl>
                     <dl class="searchList" v-if="isSearchList">
-                        <dd>小吃</dd>
-                        <dd>小吃</dd>
-                        <dd>小吃</dd>
-                        <dd>小吃</dd>
+                        <dd v-for="(item,idx) in searchList" :key="idx">{{ item }}</dd>
                     </dl>
                 </div>
                 <p class="suggest">
@@ -65,7 +61,9 @@ export default {
     data(){
         return{
             search:'',
-            isFocus:false
+            isFocus:false,
+            hotPlace:['火锅','火锅','火锅'],
+            searchList:['小吃','故宫','故宫']
         }
     },
     computed:{
@@ -81,12 +79,19 @@ export default {
             this.isFocus=true
         },
         blur:function(){
-            this.isFocus=false
+            //this.isFocus=false
+            let self=this;
+            setTimeout(function(){
+                self.isFocus=false
+            },200)
+        },
+        input:function(){
+            console.log(1)
         }
     }
 }
 
 </script>
-<style lang='less' scoped>
-    
+<style lang='scss' >
+    @import "@/assets/css/public/header/search.scss";
 </style>

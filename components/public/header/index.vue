@@ -25,5 +25,8 @@ export default {
 
 </script>
 <style lang='scss'>
-    @import "@/assets/css/public/header/index.scss"  
+    @import "@/assets/css/public/header/index.scss";
+    @import "@/assets/css/public/layout.scss";
+    @import "@/assets/css/public/header/search.scss";
+    @import "@/assets/css/public/header/topbar.scss";
 </style>

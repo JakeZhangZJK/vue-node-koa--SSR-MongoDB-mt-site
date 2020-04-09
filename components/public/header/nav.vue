@@ -61,27 +61,27 @@
                         <dt>手机应用</dt>
                         <dd>
                             <a href="#">
-                                <img src="//s0.meituan.net/bs/fe-web-meituan/2d53095/img/appicons/meituan.png" alt="">
+                                <img src="//s0.meituan.net/bs/fe-web-meituan/2d53095/img/appicons/meituan.png" alt="美团app">
                             </a>
                         </dd>
                         <dd>
                             <a href="#">
-                                <img src="//s1.meituan.net/bs/fe-web-meituan/404d350/img/appicons/waimai.png" alt="">
+                                <img src="//s1.meituan.net/bs/fe-web-meituan/404d350/img/appicons/waimai.png" alt="外卖app">
                             </a>
                         </dd>
                         <dd>
                             <a href="#">
-                                <img src="https://p0.meituan.net/travelcube/162c3308d9622f6d9cfaa49e60be4dca8573.png" alt="">
+                                <img src="https://p0.meituan.net/travelcube/162c3308d9622f6d9cfaa49e60be4dca8573.png" alt="民宿app">
                             </a>
                         </dd>
                         <dd>
                             <a href="#">
-                                <img src="//s1.meituan.net/bs/fe-web-meituan/404d350/img/appicons/dianping.png" alt="">
+                                <img src="//s1.meituan.net/bs/fe-web-meituan/404d350/img/appicons/dianping.png" alt="点评app">
                             </a>
                         </dd>
                         <dd>
                             <a href="#">
-                                <img src="//s1.meituan.net/bs/fe-web-meituan/404d350/img/appicons/maoyan.png" alt="">
+                                <img src="//s1.meituan.net/bs/fe-web-meituan/404d350/img/appicons/maoyan.png" alt="猫眼app">
                             </a>
                         </dd>
                     </dl>
