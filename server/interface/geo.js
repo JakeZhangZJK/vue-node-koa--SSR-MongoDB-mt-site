@@ -4,7 +4,6 @@ import Province from '../dbs/models/province'
 
 let router = new Router({prefix: '/geo'})
 
-const sign = 'abcd';
 
 router.get('/getPosition', async (ctx) => {
   let {
@@ -13,7 +12,7 @@ router.get('/getPosition', async (ctx) => {
       province,
       city
     }
-  } = await axios.get(`http://cp-tools.cn/geo/getPosition`)
+  } = await axios.get(`http://cp-tools.cn/geo/getPosition?sign`)
   if (status === 200) {
     ctx.body = {
       province,
@@ -39,7 +38,7 @@ router.get('/province', async (ctx) => {
   // }
   let {status, data: {
       province
-    }} = await axios.get(`http://cp-tools.cn/geo/province?sign=${sign}`)
+    }} = await axios.get(`http://cp-tools.cn/geo/province?sign`)
   ctx.body = {
     province: status === 200
       ? province
@@ -58,7 +57,7 @@ router.get('/province/:id', async (ctx) => {
   // }
   let {status, data: {
       city
-    }} = await axios.get(`http://cp-tools.cn/geo/province/${ctx.params.id}?sign=${sign}`)
+    }} = await axios.get(`http://cp-tools.cn/geo/province/${ctx.params.id}?sign`)
   if (status === 200) {
     ctx.body = {
       city
@@ -90,7 +89,7 @@ router.get('/city', async (ctx) => {
   // }
   let {status, data: {
       city
-    }} = await axios.get(`http://cp-tools.cn/geo/city?sign=${sign}`);
+    }} = await axios.get(`http://cp-tools.cn/geo/city?sign`);
   if (status === 200) {
     ctx.body = {
       city
@@ -125,7 +124,7 @@ router.get('/hotCity', async (ctx) => {
   // }
   let {status, data: {
       hots
-    }} = await axios.get(`http://cp-tools.cn/geo/hotCity?sign=${sign}`);
+    }} = await axios.get(`http://cp-tools.cn/geo/hotCity?sign`);
   if (status === 200) {
     ctx.body = {
       hots
@@ -144,7 +143,7 @@ router.get('/menu', async (ctx) => {
   // }
   let {status, data: {
       menu
-    }} = await axios.get(`http://cp-tools.cn/geo/menu?sign=${sign}`);
+    }} = await axios.get(`http://cp-tools.cn/geo/menu?sign`);
   if (status === 200) {
     ctx.body = {
       menu
