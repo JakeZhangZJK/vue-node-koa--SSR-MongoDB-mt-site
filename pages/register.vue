@@ -148,6 +148,7 @@ import axios from 'axios'
               })
               if (!namePass && !emailPass) {
                 self.$axios.post('/users/verify', {
+                  //设置中文编码
                   username: encodeURIComponent(self.ruleForm.name),
                   email: self.ruleForm.email
                 }).then(({
@@ -174,7 +175,9 @@ import axios from 'axios'
               this.$refs['ruleForm'].validate((valid) => {
                 if (valid) {
                   self.$axios.post('/users/signup', {
+                    //设置中文编码
                     username: window.encodeURIComponent(self.ruleForm.name),
+                    //使用MD5进行密码加密，MD5处理之后会有很多值，并不是hash值，于是需要toString()函数
                     password: CryptoJS.MD5(self.ruleForm.pwd).toString(),
                     email: self.ruleForm.email,
                     code: self.ruleForm.code
@@ -184,6 +187,7 @@ import axios from 'axios'
                   }) => {
                     if (status === 200) {
                       if (data && data.code === 0) {
+                        //强制跳转到登录页面
                         location.href = '/login'
                       } else {
                         self.error = data.msg
@@ -191,6 +195,7 @@ import axios from 'axios'
                     } else {
                       self.error = `服务器出错，错误码:${status}`
                     }
+                    //定时清空error
                     setTimeout(function () {
                       self.error = ''
                     }, 1500)

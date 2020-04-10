@@ -16,7 +16,7 @@ export default {
         return 'xx@qq.com' //填入你的邮箱
       },
       get pass(){
-        return 'aaaa' //填入你的授权码
+        return 'xx' //填入你的授权码
       },
       get code(){
         return ()=>{
