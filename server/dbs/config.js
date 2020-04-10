@@ -13,10 +13,10 @@ export default {
         return 'smtp.qq.com'
       },
       get user(){
-        return 'xx@qq.com'
+        return 'xx@qq.com' //填入你的邮箱
       },
       get pass(){
-        return 'xxxxxxxggsuqgnfznddib'
+        return 'aaaa' //填入你的授权码
       },
       get code(){
         return ()=>{
