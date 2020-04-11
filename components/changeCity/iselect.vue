@@ -39,6 +39,7 @@ export default {
       city:[],
       cvalue:'',
       input:'',
+      //全国城市列表
       cities:[]
     }
   },
@@ -72,9 +73,11 @@ export default {
     }
   },
   methods:{
+    //当用户输入的时候，延时处理
     querySearchAsync:_.debounce(async function(query,cb){
       let self=this;
       if(self.cities.length){
+        //搜索与输入值相关的城市
         cb(self.cities.filter(item => item.value.indexOf(query)>-1))
       }else{
         let {status,data:{city}}=await self.$axios.get('/geo/city')
@@ -89,7 +92,8 @@ export default {
       }
     },200),
     handleSelect:function(item){
-      console.log(item.value);
+      //console.log(item.value);
+      window.location.href='/'
     }
   }
 }

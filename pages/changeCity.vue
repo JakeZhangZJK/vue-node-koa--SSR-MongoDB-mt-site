@@ -20,12 +20,12 @@
 
 <script>
 import iSelect from '@/components/changeCity/iselect.vue'
-//import Hot from '@/components/changeCity/hot.vue'
+import Hot from '@/components/changeCity/hot.vue'
 //import Categroy from '@/components/changeCity/categroy.vue'
 export default {
   components:{
     iSelect,
-    //Hot,
+    Hot,
     //Categroy
   }
 }
