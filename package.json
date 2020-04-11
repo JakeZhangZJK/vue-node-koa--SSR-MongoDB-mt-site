@@ -19,6 +19,7 @@
     "crypto-js": "^4.0.0",
     "element-ui": "^2.4.11",
     "fibers": "^4.0.2",
+    "js-pinyin": "^0.1.9",
     "koa": "^2.6.2",
     "koa-bodyparser": "^4.3.0",
     "koa-generic-session": "^2.0.4",
