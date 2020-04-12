@@ -20,12 +20,13 @@
         :label="item.label"
         :value="item.value"/>
     </el-select>
+    <nuxt-link to="/">
     <el-autocomplete
       v-model="input"
       :fetch-suggestions="querySearchAsync"
       placeholder="请输入城市中文或拼音"
       @select="handleSelect"
-    />
+    /></nuxt-link>
   </div>
 </template>
 
@@ -43,7 +44,7 @@ export default {
       cities:[]
     }
   },
-  //监听pvalue值，当省份发生改变的时候，可选城市也要跟着改变
+  //监听pvalue值，当省份发生改变的时候，可选城市也要跟着改变（联动）
   watch:{
     pvalue:async function(newPvalue){
       let self=this;
@@ -73,6 +74,8 @@ export default {
     }
   },
   methods:{
+    // 加防抖；传入的第一个参数是要搜索的内容，
+    // 第二个参数是回调（其参数是个对象数组，每一项的value值将显示在筛选框中/**
     //当用户输入的时候，延时处理
     querySearchAsync:_.debounce(async function(query,cb){
       let self=this;
@@ -90,10 +93,19 @@ export default {
           cb([])
         }
       }
-    },200),
-    handleSelect:function(item){
+    },300),
+    // 搜索框和联动筛选公用的切换store中城市的方法，跳到首页功能
+    handleSelect:function(param){
       //console.log(item.value);
-      window.location.href='/'
+      let city = ''
+        if(typeof param === 'string'){
+          city = this.city.filter(item=>item.value===param)[0].label
+        }else{
+          city = param.value
+        }
+        this.$store.dispatch('geo/setPosition',{
+          city
+        })
     }
   }
 }

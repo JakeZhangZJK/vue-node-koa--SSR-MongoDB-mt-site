@@ -14,9 +14,10 @@
       class="m-categroy-section">
       <dt :id="'city-'+item.title">{{ item.title }}</dt>
       <dd>
+        <nuxt-link to="/">
         <span
           v-for="c in item.city"
-          :key="c">{{ c }}</span>
+          :key="c" @click="changeTheCity(c)">{{ c }}</span></nuxt-link>
       </dd>
     </dl>
   </div>
@@ -61,6 +62,14 @@ export default {
       //根据首字母排序
       blocks.sort((a,b)=>a.title.charCodeAt(0)-b.title.charCodeAt(0))
       self.block=blocks
+    }
+  },
+  methods:{
+    changeTheCity: function(val){
+      console.log(val)
+      this.$store.dispatch('geo/setPosition',{
+          city:val
+      })
     }
   }
 }

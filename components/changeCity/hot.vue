@@ -2,9 +2,11 @@
   <div class="m-hcity">
     <dl>
       <dt>热门城市：</dt>
+      
       <dd
         v-for="item in list"
-        :key="item.id">{{ item.name==='市辖区'?item.province:item.name }}</dd>
+        :key="item.id"
+        @click="selectCity"><nuxt-link to="/">{{ item.name==='市辖区'?item.province:item.name }}</nuxt-link></dd>
     </dl>
   </div>
 </template>
@@ -21,6 +23,13 @@ export default {
     if(status===200){
       this.list=hots
     }
+  },
+  methods:{
+      selectCity(e){
+        this.$store.dispatch('geo/setPosition',{
+          city:e.target.innerText
+        })
+      }
   }
 }
 </script>
