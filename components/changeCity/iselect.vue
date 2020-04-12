@@ -20,13 +20,12 @@
         :label="item.label"
         :value="item.value"/>
     </el-select>
-    <nuxt-link to="/">
     <el-autocomplete
       v-model="input"
       :fetch-suggestions="querySearchAsync"
       placeholder="请输入城市中文或拼音"
       @select="handleSelect"
-    /></nuxt-link>
+    />
   </div>
 </template>
 
@@ -94,7 +93,7 @@ export default {
         }
       }
     },300),
-    // 搜索框和联动筛选公用的切换store中城市的方法，跳到首页功能
+    // 搜索框和联动筛选公用的切换store中城市的方法，没有实现跳到首页功能
     handleSelect:function(param){
       //console.log(item.value);
       let city = ''
