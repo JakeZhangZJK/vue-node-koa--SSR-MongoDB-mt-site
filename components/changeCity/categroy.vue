@@ -66,7 +66,7 @@ export default {
   },
   methods:{
     changeTheCity: function(val){
-      console.log(val)
+      //console.log(val)
       this.$store.dispatch('geo/setPosition',{
           city:val
       })
