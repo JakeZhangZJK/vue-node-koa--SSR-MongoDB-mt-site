@@ -1,4 +1,6 @@
+//koa2使用passport权限认证中间件安装包
 import passport from 'koa-passport'
+//本地验证策略
 import LocalStrategy from 'passport-local'
 import UserModel from '../../dbs/models/users'
 
