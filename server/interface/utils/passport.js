@@ -2,15 +2,18 @@
 import passport from 'koa-passport'
 //本地验证策略
 import LocalStrategy from 'passport-local'
+//导入本地数据库
 import UserModel from '../../dbs/models/users'
 
-
+//提交数据（策略）
 passport.use(new LocalStrategy(async function(username,password,done){
   let where = {
     username
   };
+  //从本地数据库查找，判断是否存在该用户
   let result = await UserModel.findOne(where)
   if(result!=null){
+    //找到之后匹配密码
     if(result.password===password){
       return done(null,result)
     }else{
@@ -29,4 +32,5 @@ passport.deserializeUser(function(user,done){
   return done(null,user)
 })
 
+//导出
 export default passport
