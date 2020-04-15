@@ -55,7 +55,9 @@ export default {
     })
     if(status===200&&count>0&&status2===200){
       return {
+        //过滤图片，如果图片不存在，过滤掉
         list: pois.filter(item=>item.photos.length).map(item=>{
+          //做映射，对应于product.vue界面数据结构
           return {
             type: item.type,
             img: item.photos[0].url,

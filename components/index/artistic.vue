@@ -64,6 +64,8 @@ export default {
   },
   async mounted(){
     let self=this;
+    //console.log(self.$store.state.geo.position.city);
+    
     let {status,data:{count,pois}}=await self.$axios.get('/search/resultsByKeywords',{
       params:{
         keyword:'景点',

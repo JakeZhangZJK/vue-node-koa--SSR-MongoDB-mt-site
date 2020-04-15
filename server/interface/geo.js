@@ -1,6 +1,5 @@
 import Router from 'koa-router';
 import axios from './utils/axios'
-import Province from '../dbs/models/province'
 
 let router = new Router({prefix: '/geo'})
 
@@ -17,7 +16,7 @@ router.get('/getPosition', async (ctx) => {
   if (status === 200) {
     ctx.body = {
       province,
-      city
+      city: '长沙市'
     }
   } else {
     ctx.body = {

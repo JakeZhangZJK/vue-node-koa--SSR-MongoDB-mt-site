@@ -6,7 +6,7 @@
       class="changeCity"
       to="/changeCity">切换城市</nuxt-link>
     <!--[香河 廊坊 天津]-->
-    热门：{{hotPlaceList.name}}
+    <!--热门：{{hotPlaceList}}-->
     <!--{{$store.state.home.hotPlace.slice(0,3)}}-->
   </div>
 </template>

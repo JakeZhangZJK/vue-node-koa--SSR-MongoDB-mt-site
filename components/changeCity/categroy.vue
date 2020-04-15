@@ -14,10 +14,10 @@
       class="m-categroy-section">
       <dt :id="'city-'+item.title">{{ item.title }}</dt>
       <dd>
-        <nuxt-link to="/">
+        <!--<nuxt-link to="/">-->
         <span
           v-for="c in item.city"
-          :key="c" @click="changeTheCity(c)">{{ c }}</span></nuxt-link>
+          :key="c" @click="changeTheCity(c)">{{ c }}</span>
       </dd>
     </dl>
   </div>
@@ -67,10 +67,13 @@ export default {
   methods:{
     changeTheCity: function(val){
       //console.log(val)
-      let self=this;
+      let that=this;
       //self.$store.state.geo.position.city=val
-      this.$store.dispatch('geo/setPosition',{
+      that.$store.dispatch('geo/setPosition',{
           city:val
+      })
+      that.$router.push({
+        path: '/'
       })
     }
   }
