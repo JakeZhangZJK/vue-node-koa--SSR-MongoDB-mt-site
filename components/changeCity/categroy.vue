@@ -67,6 +67,8 @@ export default {
   methods:{
     changeTheCity: function(val){
       //console.log(val)
+      let self=this;
+      //self.$store.state.geo.position.city=val
       this.$store.dispatch('geo/setPosition',{
           city:val
       })

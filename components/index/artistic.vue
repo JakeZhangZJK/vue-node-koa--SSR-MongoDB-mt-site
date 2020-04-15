@@ -110,6 +110,7 @@ export default {
             }
           })
           self.list[self.kind]=r.slice(0,9)
+          //console.log(self.list)
         }else{
           self.list[self.kind]=[]
         }

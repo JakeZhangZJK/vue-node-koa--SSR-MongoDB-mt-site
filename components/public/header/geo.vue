@@ -27,8 +27,10 @@ export default {
     })
     if(status===200&&result){
       self.hotPlaceList=result.slice(0,3);
+      //console.log(self.hotPlaceList)
       if(self.hotPlaceList.length===0) self.hotPlaceList.name="该地区暂未发现";
     }else{
+      //console.log(`请求失败`+self.hotPlaceList)
       self.hotPlaceList.name="该地区暂未发现";
     }
   },
