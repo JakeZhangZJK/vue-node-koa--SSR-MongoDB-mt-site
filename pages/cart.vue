@@ -44,9 +44,23 @@ export default {
     }
   },
   methods:{
-      submit:function(){
-
-      }
+      submit: async function(){
+            const { status, data: { code, id }} = await this.$axios.post('/order/createOrder', {
+                id: this.cartNo,
+                price: this.cart[0].price,
+                count: this.cart[0].count
+            })
+            // console.log('status');
+            // console.log(this.cartNo + "  " + this.cart[0].price+ "  " +this.cart[0].count);
+            if (status === 200 && code === 0) {
+                this.$alert(`恭喜您，已成功下单，订单号:${id}`, '下单成功', {
+                confirmButtonText: '确定',
+                callback: action => {
+                    location.href = '/order'
+                    }
+                })
+            }
+        }
   },
   //用ssr获取数据好处:1、体验好 2、保护接口，在服务端执行
   async asyncData(ctx){
