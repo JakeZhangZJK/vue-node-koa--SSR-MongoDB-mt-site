@@ -16,7 +16,7 @@ router.get('/getPosition', async (ctx) => {
   if (status === 200) {
     ctx.body = {
       province,
-      city: '长沙市'
+      city: '北京市'
     }
   } else {
     ctx.body = {
