@@ -32,6 +32,28 @@ export default {
             }
         }
     },
+    methods:{
+        //创建购物车
+        createCart: async function(){
+            let self=this;
+            //无产品库，把商品库的数据上传到购物车，通过id绑定关系
+            let {status,data:{code,id}} = await this.$axios.post('/cart/create',{
+                params:{
+                    id:Math.random().toString().slice(3,9),
+                    detail:{
+                        name: self.meta.name,
+                        price: self.meta.biz_ext.cost,
+                        imgs: self.meta.photos
+                    }
+                }
+            })
+            if(status===200&&code===0){
+                window.location.href=`/cart/?id=${id}`
+            }else{
+                console.log('error')
+            }
+        }
+    }
 }
 
 </script>
