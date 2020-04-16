@@ -2,7 +2,7 @@
     <li v-if="meta.photos.length" class="m-detail-item">
         <dl class="section">
             <dd>
-                <img src="meta.photos[0].url" alt="meta.photos[0].title">
+                <img :src="meta.photos[0].url" :alt="meta.photos[0].title">
             </dd>
             <dd>
                 <h4>{{meta.name}}</h4>
@@ -26,10 +26,10 @@
 export default {
     props: {
         meta: {
-        type: Object,
-        default: () => {
-            return {}
-        }
+            type: Object,
+            default: () => {
+                return {}
+            }
         }
     },
 }
