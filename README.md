@@ -1,8 +1,6 @@
 ## Vue全家桶+SSR+Koa2 全栈开发仿美团网
 ☀☀☀
 
-<hr/>
-
 **项目地址：** <a href="https://github.com/Chocolate1999/Vue-family-bucket-SSR-Koa2-full-stack-development-from-Meituan">https://github.com/Chocolate1999/Vue-family-bucket-SSR-Koa2-full-stack-development-from-Meituan</a>
 
 **学习地址：**<a href="https://coding.imooc.com/class/280.html#Envir">传送门</a>
@@ -24,7 +22,6 @@
 <!-- /TOC -->
 
 ## 项目介绍
-<hr/>
 
 融汇 **前端+服务端** 全栈项目，提供后端数据接口，源码开放，可进行二次开发与优化。
 
@@ -55,7 +52,6 @@
 |  接口设计 | 数据对象模型 |思维&技巧|
 
 ## 项目笔记
-<hr/>
 
 <a href="https://blog.csdn.net/weixin_42429718/article/details/105466115">【Vue全家桶+SSR+Koa2全栈开发】（一）Vue基础</a>
 
@@ -75,7 +71,6 @@
 
 
 ## 项目运行步骤
-<hr/>
 
 本项目提供开发时的源码，可以进行二次开发及优化，欢迎 contributor 参与！
 
@@ -95,7 +90,6 @@ npm run dev
 ```
 
 ## 项目部分技术亮点
-<hr/>
 
  **1、城市服务组件**
 
@@ -181,8 +175,6 @@ input:_.debounce(async function(){
 另外，购物车会创建一个订单，创建成功后才会跳转支付页面，但需考虑支付的是哪一个订单，于是支付和订单之间有一个依赖逻辑联系，但是支付和购物车之间是没有任何依赖的，虽然支付的动作是由购物车发起的，**但是购物车和支付之间的桥梁是订单**。
 
 ## 项目成果展示
-<hr/>
-
 项目部分截图如下文所示：
 
 ![](https://img-blog.csdnimg.cn/20200418110401586.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
@@ -195,12 +187,10 @@ input:_.debounce(async function(){
 ![](https://img-blog.csdnimg.cn/20200418110339348.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
 
 ## 排版
-<hr/>
 
 笔记内容按照 <a href="https://mazhuang.org/wiki/chinese-copywriting-guidelines/"> 中文文案排版指北 </a> 进行排版。
 
 ## 结尾
-<hr/>
 
 欢迎关注微信公众号：小狮子前端Vue
 
