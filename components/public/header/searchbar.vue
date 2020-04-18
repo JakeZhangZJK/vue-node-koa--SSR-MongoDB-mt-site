@@ -4,9 +4,9 @@
       <el-col
         :span="3"
         class="left">
-        <img
+        <a href="/"><img
           src="//s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/logo.png"
-          alt="美团">
+          alt="美团"></a>
       </el-col>
       <el-col
         :span="15"
