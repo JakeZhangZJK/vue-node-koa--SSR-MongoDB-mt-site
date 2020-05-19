@@ -1,55 +1,75 @@
-.m-header{
-  @at-root .el-header{
-    .m-header.m-header-topbar{
-      width: 1190px!important;
+.m-header {
+  @at-root .el-header {
+    .m-header.m-header-topbar {
+      width: 1190px !important;
       z-index: 9999;
       height: 40px;
       line-height: 40px;
       z-index: 9;
     }
   }
+
   .m-geo {
     color: #666;
     font-size: 12px;
+    .icon-location1{
+      color: #999;
+    font-size: 14px;
+    margin-right: 1px;
+    }
+
     .changeCity {
       background: #F4F4F4;
       border: 1px solid #E5E5E5;
       border-radius: 2px;
       color: #666;
-      margin: 0 4px;
+      margin: 0;
       padding: 0 2px;
+
       &:hover {
-        color: #31BBAC;
+        color: #FE8C00;
       }
     }
+    .area{
+      color: #999;
+    }
+
     .username {
-      color: #31BBAC;
+      color: #FE8C00;
       cursor: pointer;
     }
-    .login,
-    .register {
-      font-size: 12px;
-      line-height: 40px;
-      color: #999;
-      margin: 0 5px;
-      &.login {
-        color: #31BBAC;
-        margin: 0 5px 0 20px;
-      }
-      &:hover {
-        color: #31BBAC;
-      }
+
+  
+
+   
+  }
+  .login,
+  .register {
+    font-size: 12px;
+    line-height: 40px;
+    color: #999;
+
+    &.login {
+      color: #FE8C00;
+      margin: 0 5px 0 0 ;
+    }
+
+    &:hover {
+      color: #FE8C00;
     }
   }
-  .m-nav{
+
+  .m-nav {
     float: right;
     margin: 0;
     padding: 0;
     z-index: 999;
+
     .nav {
       list-style: none;
       float: right;
       height: 40px;
+
       >li {
         float: left;
         width: 78px;
@@ -61,11 +81,12 @@
           color: #999;
 
           &:hover {
-            color: #31BBAC;
+            color: #FE8C00;
           }
         }
 
         &.list:hover {
+          background: #fff;
           border: 1px solid #E5E5E5;
           border-top: none;
 
@@ -87,7 +108,7 @@
             line-height: 35px;
 
             &:hover {
-              color: #31BBAC;
+              color: #FE8C00;
             }
           }
         }
@@ -134,7 +155,9 @@
           position: relative;
           left: -1175px;
           z-index: 999;
-          border: 1px solid #e5e5e5;
+          border-bottom: 1px solid #e5e5e5;
+          border-top: 1px solid #e5e5e5;
+          border-left: 1px solid #e5e5e5;
           display: none;
           text-align: left;
 
@@ -157,8 +180,8 @@
 
             dt {
               margin-bottom: 26px;
-              font-size: 14px;
-              color: #31BBAC;
+              font-size: 16px;
+              color: #000;
               text-align: center;
             }
 
@@ -178,7 +201,8 @@
 
             &.movie {
               width: 90px;
-              dd{
+
+              dd {
                 width: 100%;
               }
             }
@@ -187,12 +211,14 @@
               width: 380px;
               flex: 1;
               text-align: center;
+
               dd {
                 width: 60px;
                 height: 73px;
                 line-height: 73px;
                 text-align: center;
                 margin: 0 8px;
+
                 img {
                   width: 60px;
                   height: 60px;

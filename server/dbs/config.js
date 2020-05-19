@@ -1,5 +1,5 @@
 export default {
-    dbs:'mongodb://127.0.0.1:27017/student',
+    dbs:'mongodb://127.0.0.1:27017/jk-meituan',
     redis:{
       get host(){
         return '127.0.0.1'
@@ -13,10 +13,10 @@ export default {
         return 'smtp.qq.com'
       },
       get user(){
-        return 'xx@qq.com' //填入你的邮箱
+        return '2188732198@qq.com' //填入你的邮箱
       },
       get pass(){
-        return 'xx' //填入你的授权码
+        return 'nrgjtbcqxijtdjhh' //填入你的授权码
       },
       get code(){
         return ()=>{
@@ -25,7 +25,7 @@ export default {
       },
       get expire(){
         return ()=>{
-          return new Date().getTime()+60*60*1000
+          return new Date().getTime()+60*60*5000
         }
       }
     }

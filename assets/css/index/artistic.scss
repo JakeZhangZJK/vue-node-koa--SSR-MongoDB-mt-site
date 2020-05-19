@@ -65,13 +65,12 @@
 
     >li {
       width: 33.3%;
-      height: 314px;
+      height: 320px;
       padding: 10px;
       box-sizing: border-box;
       float: left;
       background: #fff;
       transition: background-color .5s;
-      height: 314px;
 
       .el-card {
         width: 100%;
@@ -120,8 +119,8 @@
 
             .price {
               height: 27px;
-              overflow: hidden;
-              margin-bottom: 10px;
+              line-height: 27px;
+              margin-bottom: 15px;
               font-size: 14px;
               color: #BE9E4D;
               font-weight: 500;

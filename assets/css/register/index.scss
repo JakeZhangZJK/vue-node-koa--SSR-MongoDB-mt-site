@@ -1,6 +1,25 @@
 .page-register {
+  .el-button-yz {
+    background-color: #f0e9e9;
+    color: #333;
+
+    &:hover {
+      background-color: #FFBD00;
+      color: #fff;
+    }
+  }
+  .el-button-bg-color{
+    background-color: #FFBD00;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    &:hover {
+      background-color: #FFBD00;
+      color: #fff;
+    }
+  }
   .header {
-    border-bottom: 2px solid #2bb8aa;
+    border-bottom: 2px solid #D8D8D8;
     min-width: 980px;
     color: #666;
 
@@ -12,15 +31,16 @@
       .site-logo {
         display: inline-block;
         width: 128px;
-        width: 54px;
         height: 36px;
-        text-indent: -9999px;
-        background-position: -669px -748px;
-        background-image: url(//s0.meituan.net/bs/file/?f=fe-sso-fs:build/assets/sp-normal.2ee5c09.png);
+        text-align: center;
+        background: url(//s0.meituan.net/bs/fe-web-meituan/fa5f0f0/img/logo.png) no-repeat right top;
+        background-size:80%;
       }
 
       .login {
         float: right;
+        margin-top: 8px;
+        
       }
 
       .bold {

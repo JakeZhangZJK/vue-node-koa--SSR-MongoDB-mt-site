@@ -1,8 +1,8 @@
 {
-  "name": "loveVueApp",
+  "name": "JakeVueApp",
   "version": "1.0.0",
   "description": "My divine Nuxt.js project",
-  "author": "Chocolate1999",
+  "author": "jakezhangzjk",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server --exec babel-node",

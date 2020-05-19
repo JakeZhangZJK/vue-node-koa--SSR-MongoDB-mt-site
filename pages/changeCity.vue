@@ -21,7 +21,7 @@
 <script>
 import iSelect from '@/components/changeCity/iselect.vue'
 import Hot from '@/components/changeCity/hot.vue'
-import Categroy from '@/components/changeCity/categroy.vue'
+import Categroy from '@/components/changeCity/category.vue'
 export default {
   components:{
     iSelect,
@@ -30,6 +30,3 @@ export default {
   }
 }
 </script>
-
-<style lang="css">
-</style>

@@ -39,8 +39,9 @@ router.post('/signup', async (ctx) => {
       msg: '请填写验证码'
     }
   }
-  let user = await User.find({username})
-  if (user.length) {
+  let user = await User.find({ username })
+  let Email = await User.find({email})
+  if (user.length || Email.length ) {
     ctx.body = {
       code: -1,
       msg: '已被注册'
@@ -71,7 +72,7 @@ router.post('/signup', async (ctx) => {
 })
 //登录接口
 router.post('/signin', async (ctx, next) => {
-  return Passport.authenticate('local', function(err, user, info, status) {
+  return Passport.authenticate('local', (err, user, info, status) =>{
     if (err) {
       ctx.body = {
         code: -1,
@@ -102,7 +103,7 @@ router.post('/verify', async (ctx, next) => {
   if (saveExpire && new Date().getTime() - saveExpire < 0) {
     ctx.body = {
       code: -1,
-      msg: '验证请求过于频繁，1分钟内1次'
+      msg: '验证请求过于频繁，1分钟1次'
     }
     return false
   }
@@ -125,8 +126,8 @@ router.post('/verify', async (ctx, next) => {
   let mailOptions = {
     from: `"认证邮件" <${Email.smtp.user}>`,
     to: ko.email,
-    subject: '《一百个Chocolate高仿美团网全栈开发》注册码',
-    html: `您在《一百个Chocolate高仿美团网》网页中注册，您的邀请码是${ko.code}`
+    subject: '【Jake Zhang 高仿美团网全栈开发】注册码',
+    html: `您正在【Jake Zhang 高仿美团网】网页中注册，您的邀请码是${ko.code}，5分钟内有效，请勿泄露。`
   }
   //发送邮件
   await transporter.sendMail(mailOptions, (error, info) => {
@@ -139,7 +140,7 @@ router.post('/verify', async (ctx, next) => {
   })
   ctx.body = {
     code: 0,
-    msg: '验证码已发送，可能会有延时，有效期1分钟'
+    msg: '验证码已发送，可能会有延时，有效期5分钟'
   }
 })
 //退出接口

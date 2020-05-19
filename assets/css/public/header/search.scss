@@ -14,11 +14,14 @@
         }
       }
       .center {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         flex: 1;
         width: auto;
         .wrapper {
           margin-top: 16px;
-          border: 1px solid #13D1BE;
+          border: 1px solid #E5E5E5;
           border-radius: 4px;
           width: 552px;
           box-sizing: border-box;
@@ -35,8 +38,10 @@
           .el-button {
             width: 88px;
             border: none;
-            background: #13D1BE;
-            font-size: 16px;
+            color: #000;
+            background: #FFC300;
+            font-size: 18px;
+            font-weight: bold;
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
             vertical-align: -1px;
@@ -52,7 +57,7 @@
             background: #fff;
             padding: 10px;
             font-size: 12px;
-            width: 462px;
+            width: 465px;
             box-sizing: border-box;
             border: 1px solid #E5E5E5;
             border-top: none;
@@ -66,7 +71,7 @@
               font-weight: bold;
             }
 
-            dd {
+            dd a{
               display: inline-block;
               color: #666;
               margin-right: 10px;
@@ -76,7 +81,7 @@
 
               &:hover {
                 background: #F8F8F8;
-                color: #31BBAC;
+                color: #FE8C00;
               }
             }
 
@@ -109,7 +114,7 @@
             font-size: 12px;
 
             &:hover {
-              color: #31BBAC;
+              color: #FE8C00;
             }
           }
         }
@@ -118,6 +123,7 @@
           list-style: none;
           display: flex;
           margin-top: 25px;
+          margin-left: 0;
 
           li {
             font-weight: 700;
@@ -142,9 +148,15 @@
               }
 
               &.business:hover {
-                color: #31BBAC;
+                color: rgb(248, 147, 15);
+              }
+              &.gongyi:hover {
+                color: #f04d4e;
               }
             }
+          }
+          li:nth-child(1){
+            margin: 0 20px 0 0;
           }
         }
       }

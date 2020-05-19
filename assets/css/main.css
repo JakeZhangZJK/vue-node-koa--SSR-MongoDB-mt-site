@@ -39,7 +39,8 @@ footer{
 }
 
 a, a:hover, a:focus, a:visited{
-  color: #41B883;
+  /* color: #41B883; */
+  color: #FE8C00;
 }
 
 .logo {

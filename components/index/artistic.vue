@@ -64,8 +64,6 @@ export default {
   },
   async mounted(){
     let self=this;
-    //console.log(self.$store.state.geo.position.city);
-    
     let {status,data:{count,pois}}=await self.$axios.get('/search/resultsByKeywords',{
       params:{
         keyword:'景点',
@@ -112,7 +110,6 @@ export default {
             }
           })
           self.list[self.kind]=r.slice(0,9)
-          //console.log(self.list)
         }else{
           self.list[self.kind]=[]
         }
