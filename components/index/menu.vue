@@ -1,8 +1,8 @@
 <template>
   <div class="m-menu">
+    <!-- 首页菜单 -->
     <dl class="nav" @mouseleave="mouseleave">
       <dt>全部分类</dt>
-      <!--   @mouseenter="enter" -->
       <dd v-for="(item,idx) in $store.state.home.menu " :key="idx"  @mouseenter="enter">
         <i :class="item.type" />{{ item.name }}<span class="arrow el-icon-arrow-right" />
       </dd>

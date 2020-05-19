@@ -1,99 +1,103 @@
-## Vue全家桶+SSR+Koa2 全栈开发仿美团网
-☀☀☀
-
-**项目地址：** <a href="https://github.com/Chocolate1999/Vue-family-bucket-SSR-Koa2-full-stack-development-from-Meituan">https://github.com/Chocolate1999/Vue-family-bucket-SSR-Koa2-full-stack-development-from-Meituan</a>
-
-**学习地址：**<a href="https://coding.imooc.com/class/280.html#Envir">传送门</a>
-
-<!-- TOC -->
-
-- [Vue全家桶+SSR+Koa2 全栈开发仿美团网](#vue全家桶ssrkoa2-全栈开发仿美团网)
-- [项目介绍](#项目介绍)
-    - [主要业务](#主要业务)
-    - [技术内容](#技术内容)
-    - [项目重点](#项目重点)
-- [项目笔记](#项目笔记)
-- [项目运行步骤](#项目运行步骤)
-- [项目部分技术亮点](#项目部分技术亮点)
-- [项目成果展示](#项目成果展示)
-- [排版](#排版)
-- [结尾](#结尾)
-
-<!-- /TOC -->
-
-## 项目介绍
-
-融汇 **前端+服务端** 全栈项目，提供后端数据接口，源码开放，可进行二次开发与优化。
 
 ### 主要业务
 
 - 首页
 - 登录/注册
 - 产品列表
-- 产品详情
-- 购物车
+- 产品详情页展示
+- 个人中心/购物车
 - 订单
 
 ### 技术内容
 - 使用 **nuxt.js** 和 **koa2**  两者之间做  **SSR**
 - 数据和状态同步，使用 **Vuex**
 - 前端使用最新版 **Vue 语法** 和 **Vue Cli**
-- 后端使用 **koa2** ，对应的是 **redis** 和 **mongodb**
+- 后端使用 **node的koa2框架** ，对应的是 **redis** 和 **mongodb**
 - 使用了数据对象模型管理工具 **mongoose**
-- 采用饿了么 **element-ui** 框架构建页面，简洁，美观
-- 数据真实，杜绝 **Mock** ，逼真体验
+- 页面整体采用饿了么 **element-ui** 框架构建页面，简洁，美观
+- 数据真实，杜绝 **Mock** ，逼真流畅的体验
 
 ### 项目重点
-| Column 1 | Column 2      | Column 3  |
+| 1 |  2  | 3  |
 |:--------:| :-------------:|:-------------:|
-| 登录/注册 | SMTP服务 |城市服务|
+| 登录/注册 | 腾讯邮箱SMTP服务 |城市服务|
 | 推荐服务 | 搜索服务 |地图服务|
 | 购物车 |订单设计 | 组件复用设计|
 |  接口设计 | 数据对象模型 |思维&技巧|
 
-## 项目笔记
 
-<a href="https://blog.csdn.net/weixin_42429718/article/details/105466115">【Vue全家桶+SSR+Koa2全栈开发】（一）Vue基础</a>
-
-<a href="https://blog.csdn.net/weixin_42429718/article/details/105504843">【Vue全家桶+SSR+Koa2全栈开发】（二）Vuex基础</a>
-
-<a href="https://blog.csdn.net/weixin_42429718/article/details/105504891">【Vue全家桶+SSR+Koa2全栈开发】（三）Koa2基础</a>
-
-<a href="https://blog.csdn.net/weixin_42429718/article/details/105504951">【Vue全家桶+SSR+Koa2全栈开发】（四）mongoose基础</a>
-
-<a href="https://blog.csdn.net/weixin_42429718/article/details/105505026">【Vue全家桶+SSR+Koa2全栈开发】（五） Redis基础</a>
-
-<a href="https://blog.csdn.net/weixin_42429718/article/details/105505070">【Vue全家桶+SSR+Koa2全栈开发】（六） Nuxt.js基础</a>
-
-<a href="https://blog.csdn.net/weixin_42429718/article/details/105505128">【Vue全家桶+SSR+Koa2全栈开发】（七） 项目搭建与配置</a>
-
-<a href="https://blog.csdn.net/weixin_42429718/article/details/105326187">【Vue全家桶+SSR+Koa2全栈开发】学习笔记整合 （全）</a>
 
 
 ## 项目运行步骤
 
-本项目提供开发时的源码，可以进行二次开发及优化，欢迎 contributor 参与！
+本项目提供开发时的源码，可以进行二次开发及优化，
 
 ① **Star** 本仓库，然后 **Fork** 到自己 github，下载代码到本地
 
-```java
-# install dependencies
-$ npm run install
+```js
+$ git clone git@github.com:JakeZhangZJK/vue-node-koa--SSR-MongoDB-mt-site.git
 ```
 
-② 配置后端数据库文件，启动 MongoDB 和 Redis 服务（详情请见上文笔记）
+② 下载并配置好后端数据库文件，启动 MongoDB 和 Redis 服务（安装与配置教程自行百度）
 
-③ 二次开发运行
+③ 安装依赖并启动项目
 
-```javascript
-npm run dev
+```js
+$ npm/cnpm install
+$ npm/cnpm run dev
+
 ```
 
 ## 项目部分技术亮点
+ ### 1、极简的dom节点实现复杂的表单/页面结构
+ 
+ 本项目中首页导航栏/主页菜单/城市服务页面/产品详情列表等每个复杂的页面dom节点几乎不超过10个，十分简洁，节约带宽。
+ 
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722ba3bb9467873?w=1189&h=866&f=png&s=389246)
 
- **1、城市服务组件**
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722ba90ea6b14c8?w=1059&h=364&f=png&s=62889)
 
-![](https://img-blog.csdnimg.cn/20200418113834793.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+利用精简的几个dom节点就可实现复杂的表单页面。
+ ### 2、注册模块
+ 
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722bb83feae16bf?w=1738&h=808&f=png&s=57243)
+**后面补充。。。。。。。。。。。。。。**
+### 3、登录模块
+ 
+#### 1.登录业务流程
+- 在登录页面输入用户名和密码
+- 调用服务端接口进行验证
+- 验证失败，返回错误信息告知用户；验证通过，根据后台的响应状态跳转到项目主页
+- ![](https://user-gold-cdn.xitu.io/2020/4/4/171441804e32da7c?w=812&h=379&f=png&s=51296)
+
+#### 2. 对密码加密
+```javascript
+self.$axios.post('/users/signin', {
+   username : window.encodeURIComponent(self.username),
+   password : CryptoJS.MD5(self.password).toString()
+})
+```
+#### 3. 请求成功跳转到主页面
+
+```javascript
+ location.href="/" 
+```
+#### 4. 退出逻辑
+
+退出(exit.vue)组件，采用**中间件**来实现退出操作。
+
+点击`users/components/public/header/user.vue`文件中的退出后跳转到退出页`(page/exit.vue)`之后，自动的去执行退出操作所以利用`middleware`机制，触发这个获取退出的接口，让接口响应完之后，我们再做自动化的执行动作。
+#### 5. 用户数据&状态
+
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722b5495cf7b605?w=898&h=305&f=png&s=28446)
+浏览器发送一个 `request` 请求，根据 `cookie` ，服务器通过 `passport` 与 `redis`来验证当前是否是登录状态，返回 `username`。
+
+ ### 3、城市服务
+
+
+
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722bbf727521a37?w=1550&h=851&f=png&s=114273)
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722b441512bc191?w=1398&h=461&f=png&s=223713)
 城市定位实现原理：
 
 浏览器在发出请求的时候，会有一个 `request` ，在服务器端可以拿到 `requset.ip`，然后就可以取数据中心作映射，根据 `ip` 来定位城市，服务器拿到 `city`后再下发给浏览器。
@@ -104,51 +108,14 @@ npm run dev
 
 项目实现方式：当浏览器去请求文档的时候，服务端 ip已经知道了，那个时候就可以拿到对应的城市，立即返回数据给浏览器。做法就是通过 `vuex` 来同步状态，然后通过 `SSR` 异步请求就能得到数据。
 
-**2、用户数据&状态**
-![](https://img-blog.csdnimg.cn/20200418120527347.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
-浏览器发送一个 `request` 请求，根据 `cookie` ，服务器通过 `passport` 与 `redis`来验证当前是否是登录状态，返回 `username`。
 
-**3、产品详情页开发**
-
-本项目**产品列表页**（如下图所示）
-
-![](https://img-blog.csdnimg.cn/20200418134724755.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
-**产品详情页**（如下图所示）
-![](https://img-blog.csdnimg.cn/20200418134741635.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
-每一个列表对应着多个 `item` ，每个 `item` 与详情页是一对一关系，而上述两个页面路由是没有关联关系的。特此说明：本项目没有 **产品库**，因此路由没有根据 `id`来，依旧是根据搜索关键词 `keyword`。另外，产品列表页和产品详情页之间做了**登录拦截**。
-
-接着，关于产品详情页是如何跳转到购物车的呢？
-
-购物车页面如下图所示，可以看到，页面路由依旧是没有任何关联，但从下图地址栏可见，有一个重要的`id`属性。因为**产品详情页不能与购物车创建一对一映射关系**，即在进入产品详情页时，购物车页面是不存在的。当点击购买跳转到购物车时才会创建一个购物车。另外，产品详情页和购物车之间做了**登录拦截**。
-![](https://img-blog.csdnimg.cn/2020041813563379.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
-
-**4、登录逻辑**
-
-1. 将登录页面用户输入的username和password作为参数，请求接口`/users/signin`
-2. 对密码加密
-```javascript
-self.$axios.post('/users/signin', {
-   username : window.encodeURIComponent(self.username),
-   password : CryptoJS.MD5(self.password).toString()
-})
-```
-3. 请求成功跳转到主页面
-
-```javascript
- location.href="/" 
-```
-
-**5、退出逻辑**
-
-退出(exit.vue)组件，采用**中间件**来实现退出操作。
-
-点击`users/components/public/header/user.vue`文件中的退出后跳转到退出页`(page/exit.vue)`之后，自动的去执行退出操作所以利用`middleware`机制，触发这个获取退出的接口，让接口响应完之后，我们再做自动化的执行动作
-
-**6、搜索相关**
-
+### 4、首页搜索模块
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722bbe031cca9b8?w=828&h=794&f=png&s=262232)
 每输入一个字母都进行一次请求，显然浪费性能,因此引入`lodash`插件，使用`debounce`，函数防抖。
 
-```javascript
+**后面再补充。。。。。。。。。。。。。。。。**
+
+```js
 import _ from 'lodash'
 input:_.debounce(async function(){
       let self=this;
@@ -166,36 +133,63 @@ input:_.debounce(async function(){
 
 <a href="https://segmentfault.com/a/1190000015312430">参考：由浅入深学习lodash的debounce函数</a>
 
+### 5、产品详情模块
 
-**7、购物车相关**
+**产品列表页**
+
+
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722baaca64576a0?w=1534&h=818&f=png&s=416367)
+**产品详情页**
+
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722baccf501acc3?w=1557&h=897&f=png&s=540247)
+每一个列表对应着多个 `item` ，每个 `item` 与详情页是一对一关系，而上述两个页面路由是没有关联关系的。由于本项目没有 **产品库**，因此路由没有根据 `id`关联产品详情，依旧是根据搜索关键词 `keyword`。另外，产品列表页和产品详情页之间做了**登录拦截**。
+
+接着，就是从产品详情页是跳转到购物车了
+
+购物车页面如下图所示，可以看到，页面路由依旧是没有任何关联，但从下图地址栏可见，有一个重要的`id`属性。因为**产品详情页不能与购物车创建一对一映射关系**，即在进入产品详情页时，购物车页面是不存在的。当点击购买跳转到购物车时才会创建一个购物车。另外，产品详情页和购物车之间同样做了**登录拦截**。
+
+
+
+
+
+
+### 6、购物车相关
 
 父组件`pages/cart.vue`通过**asyncData**获取数据(接口：`/cart/getCart`)
 传给子组件 `list.vue` 所有订单数据，由子组件全部渲染出来，通过`cartData`变量联系，如果我在子组件中更改了购买商品的数量，也就是cartData中的值被更改了，那么，我们在父组件监听的total(所有订单总价),也会重新计算
 
 另外，购物车会创建一个订单，创建成功后才会跳转支付页面，但需考虑支付的是哪一个订单，于是支付和订单之间有一个依赖逻辑联系，但是支付和购物车之间是没有任何依赖的，虽然支付的动作是由购物车发起的，**但是购物车和支付之间的桥梁是订单**。
 
-## 项目成果展示
-项目部分截图如下文所示：
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722bb10fd877f67?w=1314&h=279&f=png&s=17253)
+### 7、订单中心
 
-![](https://img-blog.csdnimg.cn/20200418110401586.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
-![](https://img-blog.csdnimg.cn/20200418110421468.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
-![](https://img-blog.csdnimg.cn/20200418110447173.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
-![](https://img-blog.csdnimg.cn/20200418110241441.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722bc43cdc4dec2?w=1511&h=530&f=png&s=127842)
 
-![](https://img-blog.csdnimg.cn/20200418110305546.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
-![](https://img-blog.csdnimg.cn/20200418110324961.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
-![](https://img-blog.csdnimg.cn/20200418110339348.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+## 页面全家福
 
-## 排版
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722bc75de823cce?w=1574&h=798&f=png&s=1122957)
 
-笔记内容按照 <a href="https://mazhuang.org/wiki/chinese-copywriting-guidelines/"> 中文文案排版指北 </a> 进行排版。
 
-## 结尾
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722bc84af79f278?w=1587&h=780&f=png&s=474653)
 
-欢迎关注微信公众号：小狮子前端Vue
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722bc8ef1e3348e?w=1585&h=875&f=png&s=1934564)
 
-谢谢您的支持！✿✿ヽ(°▽°)ノ✿
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722bca1cde55f55?w=1533&h=907&f=png&s=489335)
 
-注：本仓库不参与商业行为，也请各位读者周知。(This warehouse is not involved in commercial activities.)
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722bcaa9fe8f571?w=1553&h=823&f=png&s=482520)
+
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722bd44ecec56b3?w=1540&h=896&f=png&s=540399)
+
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722bd585bb21a6a?w=1471&h=640&f=png&s=186765)
+
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722bcc334c49b0e?w=1364&h=795&f=png&s=51317)
+
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722bcb7083da763?w=1320&h=742&f=png&s=386867)
+
+## 免责声明
+本项目为仿做项目,仅做练手和学习使用,非官方网站,禁止用于商业目的,产生的一切侵权著作法律后果,与本作者无关。
 
 转载使用请注明出处，谢谢！
+
+Copyright (c) 2020 Jake Zhang
+

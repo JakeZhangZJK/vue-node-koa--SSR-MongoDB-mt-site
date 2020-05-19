@@ -7,7 +7,8 @@
       to="/changeCity">切换城市</nuxt-link>
     <!--[香河 廊坊 天津]-->
     <!--热门：{{hotPlaceList}}-->
-    <!--{{$store.state.home.hotPlace.slice(0,3)}}-->
+    <span class="area">  [香河 廊坊 天津]</span>
+ 
   </div>
 </template>
 
@@ -18,22 +19,26 @@ export default {
       hotPlaceList:[]
     }
   },
-  async mounted() {
-    let self=this;
-    let {status,data:{result}}=await self.$axios.get('/search/hotPlace',{
+  mounted() {
+   this.getPosition()
+  },
+  methods:{
+   async getPosition(){
+       let {status,data:{result}}=await this.$axios.get('/search/hotPlace',{
       params:{
-        city:self.$store.state.geo.position.city
+        city:this.$store.state.geo.position.city
       }
     })
     if(status===200&&result){
-      self.hotPlaceList=result.slice(0,3);
-      //console.log(self.hotPlaceList)
-      if(self.hotPlaceList.length===0) self.hotPlaceList.name="该地区暂未发现";
+      this.hotPlaceList=result.slice(0,3);
+      //console.log(this.hotPlaceList)
+      if(this.hotPlaceList.length===0) this.hotPlaceList.name="该地区暂未发现";
     }else{
-      //console.log(`请求失败`+self.hotPlaceList)
-      self.hotPlaceList.name="该地区暂未发现";
+      //console.log(`请求失败`+this.hotPlaceList)
+      this.hotPlaceList.name="该地区暂未发现";
     }
-  },
+    }
+  }
 }
 </script>
 
