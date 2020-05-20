@@ -59,3 +59,13 @@
 .el-mail {
   width: 980px;
 }
+.el-button-bg-color{
+  background-color: #FFBD00;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  &:hover {
+    background-color: #FFBD00;
+    color: #fff;
+  }
+}

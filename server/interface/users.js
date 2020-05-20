@@ -95,7 +95,7 @@ router.post('/signin', async (ctx, next) => {
     }
   })(ctx, next)
 })
-//验证码验证接口
+//码验证接口
 router.post('/verify', async (ctx, next) => {
   let username = ctx.request.body.username
   const saveExpire = await Store.hget(`nodemail:${username}`, 'expire')
@@ -103,7 +103,7 @@ router.post('/verify', async (ctx, next) => {
   if (saveExpire && new Date().getTime() - saveExpire < 0) {
     ctx.body = {
       code: -1,
-      msg: '验证请求过于频繁，1分钟1次'
+      msg: '请求过于频繁，1分钟1次'
     }
     return false
   }
@@ -153,7 +153,7 @@ router.get('/exit', async (ctx, next) => {
       code: 0
     }
   } else {
-    ctx.body = {
+    ctx.body = {  
       code: -1
     }
   }

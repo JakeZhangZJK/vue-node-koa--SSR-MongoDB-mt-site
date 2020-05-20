@@ -10,14 +10,16 @@
           应付金额：<em class="money">￥{{ total }}</em>
         </p>
         <div class="post">
-          <el-button
+          <el-button class="el-button-bg-color"
             type="primary"
             @click="submit">提交订单</el-button>
         </div>
       </el-col>
       <el-col
         v-else
-        class="empty">购物车为空</el-col>
+        class="empty">  <img
+            src="//p0.meituan.net/codeman/56a7d5abcb5ce3d90fc91195e5b5856911194.png"
+            alt="购物车为空"></el-col>
     </el-row>
   </div>
 </template>
@@ -55,6 +57,7 @@ export default {
             if (status === 200 && code === 0) {
                 this.$alert(`恭喜您，已成功下单，订单号:${id}`, '下单成功', {
                 confirmButtonText: '确定',
+                
                 callback: action => {
                     location.href = '/order'
                     }

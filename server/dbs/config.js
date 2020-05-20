@@ -5,9 +5,10 @@ export default {
         return '127.0.0.1'
       },
       get port(){
-        return 6379
+        return 6379 //Redis默认端口，不建议修改
       }
     },
+    // 配置邮箱服务
     smtp:{
       get host(){
         return 'smtp.qq.com'
@@ -18,12 +19,12 @@ export default {
       get pass(){
         return 'nrgjtbcqxijtdjhh' //填入你的授权码
       },
-      get code(){
+      get code(){//随机验证码
         return ()=>{
           return Math.random().toString(16).slice(2,6).toUpperCase()
         }
       },
-      get expire(){
+      get expire(){// 过期时间
         return ()=>{
           return new Date().getTime()+60*60*5000
         }

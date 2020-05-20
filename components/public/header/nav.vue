@@ -25,7 +25,7 @@
         <nuxt-link to="/center">商家中心</nuxt-link>
         <dl>
           <dd>
-            <nuxt-link to="/userCenter">登录商家中心</nuxt-link>
+            <nuxt-link to="/order">登录商家中心</nuxt-link>
           </dd>
           <dd>
             <nuxt-link to="/coop">我想合作</nuxt-link>

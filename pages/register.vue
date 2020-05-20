@@ -174,7 +174,7 @@
                     message: '恭喜，注册成功',
                     type: 'success'
                   });
-                  //强制跳转到登录页面
+                  //跳转到登录页面
                   location.href = '/login'
                 } else {
                   this.error = data.msg
